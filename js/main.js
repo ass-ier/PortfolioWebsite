@@ -6,6 +6,7 @@ $(window).on('load', function() {
     --------------------*/
     $(".loader").fadeOut();
     $("#preloder").delay(400).fadeOut("slow");
+    
 
     var masonryLayout = function () {
         $('.portfolios-area').masonry({
@@ -40,7 +41,19 @@ $(window).on('load', function() {
         $('.main-menu').slideToggle();
     });
     
-
+    $(document).ready(function() {
+        // Initialize Magnific Popup for gallery
+        $('.image-gallery').magnificPopup({
+            delegate: 'a', // child items selector, by clicking on it popup will open
+            type: 'image',
+            gallery: {
+                enabled: true // Enables the gallery mode for navigation
+            },
+            mainClass: 'mfp-fade', // Fade animation
+            removalDelay: 300, // Delay in milliseconds before removing the popup
+            closeOnContentClick: true
+        });
+    });
     /*------------------
         Background Set
     --------------------*/

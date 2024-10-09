@@ -96,11 +96,32 @@ ol {
 	width: 100%;
 }
 
-.set-bg {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top center;
+/* This applies the desired styles to .set-bg elements on portfolio2, nature, and other pages */
+.portfolio2-page .set-bg,
+.nature-page .set-bg,
+.other-page .set-bg {
+    background-size: contain;  
+    background-position: center;  
+    background-repeat: no-repeat; 
 }
+
+/* This applies the default styles for .set-bg elements globally */
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;  /* Default for all other pages */
+    background-position: top center; 
+}
+
+/* Exclude the banner and footer sections from .set-bg styles */
+.banner-section.set-bg,
+.footer-section.set-bg {
+    background-size: auto; /* Set to desired style (auto, contain, etc.) */
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+
+
 
 .spad {
 	padding-top: 105px;
